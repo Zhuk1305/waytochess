@@ -1,1 +1,1 @@
-# waytochess
+# переверстка лендинга для waytochess
