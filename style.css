@@ -273,7 +273,7 @@ a {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: #7a7a7a;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .form-item .checbox-label a {
   text-decoration: underline;
@@ -366,7 +366,7 @@ input[type="checkbox"]:checked {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 60px 0 60px;
+  padding: 60px 0;
 }
 .sale-block_info h2 {
   font-size: 56px;
@@ -381,4 +381,47 @@ input[type="checkbox"]:checked {
   background: #fff;
   color: #7a7a7a;
   padding: 20px 50px;
+}
+.sale-block_info .btn:hover {
+  background: #eeeeee;
+  color: #444444;
+}
+
+/* cost block */
+.cost-block {
+  height: 100vh;
+  max-width: 1320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+}
+.cost-block h2 {
+  font-size: 56px;
+}
+.cost-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.cost-info_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 28%;
+  height: 100%;
+}
+.cost-info_item span {
+  font-size: 18px;
+  line-height: 28px;
+}
+.item-header {
+  font-size: 20px;
+  margin: 16px 0 45px;
+  line-height: 28px;
+}
+.big-header {
+  margin-bottom: 20px;
 }
