@@ -26,7 +26,7 @@ a {
   font-size: 16px;
   font-weight: bold;
   background: #4baebe;
-  border-radius: 14px;
+  border-radius: 10px;
   border: 0px solid #fff;
   padding: 24px 36px;
   color: #fff;
@@ -348,4 +348,37 @@ input[type="checkbox"]:checked {
 
 .red-star {
   color: red;
+}
+
+/* sale block */
+.sale-block {
+  height: 100vh;
+}
+.sale-block_img {
+  height: 50%;
+  background: url(./assets/img/bg-img2.jpg) no-repeat center center;
+}
+.sale-block_info {
+  height: 50%;
+  background: #4baebe;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 60px 0 60px;
+}
+.sale-block_info h2 {
+  font-size: 56px;
+  color: #fff;
+}
+.sale-block_info p {
+  font-size: 20px;
+  font-weight: 500;
+}
+.sale-block_info .btn {
+  min-width: none;
+  background: #fff;
+  color: #7a7a7a;
+  padding: 20px 50px;
 }
