@@ -3,6 +3,9 @@
   padding: 0;
   margin: 0;
 }
+body {
+  margin: auto;
+}
 p,
 span {
   font-family: "Montserrat", sans-serif;
@@ -46,6 +49,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px;
 }
 .logo-container {
   display: flex;
@@ -135,7 +139,7 @@ a {
 .server-items_container {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 .server-item {
@@ -145,7 +149,7 @@ a {
   align-items: center;
   text-align: justify;
   width: 305px;
-  margin-top: 60px;
+  margin: 60px 10px;
 }
 .server-item_content {
   width: 100%;
@@ -187,8 +191,7 @@ a {
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
-    url(./assets/img/bg-img.jpg) no-repeat center center;
-  background-size: cover;
+    url(./assets/img/bg-img.jpg) no-repeat center center/cover;
   display: flex;
   justify-content: center;
 }
@@ -196,7 +199,7 @@ a {
   width: 100%;
   max-width: 1320px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin: auto;
   padding: 20px;
@@ -234,7 +237,7 @@ a {
 }
 
 .special-block_form {
-  height: 620px;
+  min-height: 620px;
   min-width: 350px;
   width: 20%;
   padding: 26px 20px;
@@ -375,6 +378,7 @@ input[type="checkbox"]:checked {
 .sale-block_info p {
   font-size: 20px;
   font-weight: 500;
+  text-align: center;
 }
 .sale-block_info .btn {
   background: #fff;
@@ -388,22 +392,25 @@ input[type="checkbox"]:checked {
 
 /* cost block */
 .cost-block {
-  height: 100vh;
+  min-height: 100vh;
   max-width: 1320px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   margin: auto;
+  padding: 30px;
 }
 .cost-block h2 {
   font-size: 56px;
+  margin-bottom: 50px;
 }
 .cost-info {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: center;
+  margin-bottom: 60px;
 }
 .cost-info_container {
   display: flex;
@@ -430,14 +437,16 @@ input[type="checkbox"]:checked {
   margin-bottom: 20px;
 }
 .btn-pay {
-  margin-top: 30px;
+  margin-top: 20px;
   min-width: 250px;
 }
 
 /* about school block */
 .about-school_block {
-  height: 90vh;
   background: #f4f4f4;
+  padding: 40px;
+  display: flex;
+  align-items: center;
 }
 .about-school_container {
   height: 100%;
@@ -445,7 +454,7 @@ input[type="checkbox"]:checked {
   max-width: 1320px;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .about-school_img {
@@ -469,12 +478,13 @@ input[type="checkbox"]:checked {
 
 /* footer */
 .footer {
-  height: 10vh;
+  min-height: 10vh;
   max-width: 1320px;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  padding: 10px;
 }
 .footer h5 {
   font-size: 14px;
@@ -496,4 +506,82 @@ input[type="checkbox"]:checked {
 }
 .footer-info_developer a h5 {
   margin-right: 5px;
+}
+
+@media (max-width: 900px) {
+  .logo-container img {
+    margin-right: 5px;
+  }
+  .name-school h2 {
+    font-size: 26px;
+  }
+  .phone h2 {
+    font-size: 26px;
+  }
+  .more-then_btn {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn-free {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .special-block_container {
+    flex-direction: column;
+  }
+  .special-info_item {
+    width: 100%;
+    height: 45%;
+  }
+  .cost-info {
+    flex-wrap: wrap;
+  }
+  .cost-info_container {
+    margin: 20px 10px 0 0;
+  }
+  .about-school_container {
+    flex-direction: column;
+  }
+  .about-school_img {
+    width: 90%;
+  }
+  .about-school_info {
+    margin-right: 0;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-info_developer a h5 {
+    margin-right: 0;
+  }
+  .counter {
+    display: none;
+  }
+  .footer-info_developer {
+    display: none;
+  }
+  .footer-info {
+    width: 90%;
+  }
+}
+@media (max-width: 800px) {
+  .name-school {
+    display: none;
+  }
+  .special-info h2 {
+    font-size: 36px;
+    text-align: center;
+  }
+  .special-info_item {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .cost-block h2 {
+    text-align: center;
+  }
+  .footer h5 {
+    font-size: 10px;
+  }
 }
