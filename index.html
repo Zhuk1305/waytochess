@@ -43,10 +43,8 @@
           шахмат
         </h1>
         <div class="more-then_btn">
-          <button class="btn btn-free">
-            <a href="#special-form">Попробовать бесплатно</a>
-          </button>
-          <button class="btn btn-record">Записаться на курс</button>
+          <button class="btn btn-free">Попробовать бесплатно</button>
+          <button class="btn btn-record record">Записаться на курс</button>
         </div>
       </section>
       <section class="servers-block">
@@ -64,7 +62,7 @@
             </div>
             <div class="server-item_footer">
               <div class="line"></div>
-              <button class="btn">Записаться</button>
+              <button class="btn record">Записаться</button>
             </div>
           </div>
           <div class="server-item">
@@ -81,7 +79,7 @@
             </div>
             <div class="server-item_footer">
               <div class="line"></div>
-              <button class="btn">Записаться</button>
+              <button class="btn record">Записаться</button>
             </div>
           </div>
           <div class="server-item">
@@ -99,7 +97,7 @@
             </div>
             <div class="server-item_footer">
               <div class="line"></div>
-              <button class="btn">Записаться</button>
+              <button class="btn record">Записаться</button>
             </div>
           </div>
           <div class="server-item">
@@ -121,7 +119,7 @@
             </div>
             <div class="server-item_footer">
               <div class="line"></div>
-              <button class="btn">Записаться</button>
+              <button class="btn record">Записаться</button>
             </div>
           </div>
           <div class="server-item">
@@ -139,7 +137,7 @@
             </div>
             <div class="server-item_footer">
               <div class="line"></div>
-              <button class="btn">Записаться</button>
+              <button class="btn record">Записаться</button>
             </div>
           </div>
           <div class="server-item">
@@ -156,12 +154,12 @@
             </div>
             <div class="server-item_footer">
               <div class="line"></div>
-              <button class="btn">Записаться</button>
+              <button class="btn record">Записаться</button>
             </div>
           </div>
         </div>
       </section>
-      <section id="special-form" class="special-block">
+      <section class="special-block">
         <div class="special-block_container">
           <div class="special-info">
             <h2>Особенности школы <br />Way To Chess</h2>
@@ -208,17 +206,20 @@
               Записаться <br />
               на пробный урок
             </h2>
-            <form action="" class="form">
+            <form action="#" class="form">
               <div class="form-item form-input">
-                <label for=""><span class="red-star">*</span> Имя</label>
-                <input type="text" />
+                <label><span class="red-star">*</span> Имя</label>
+                <input type="text" name="Name" />
+                <h5 class="name-message">Это поле обязательное</h5>
               </div>
               <div class="form-item form-input">
-                <label for=""><span class="red-star">*</span> Телефон</label>
-                <input type="text" />
+                <label><span class="red-star">*</span> Телефон </label>
+                <input type="phone" name="Phone" />
+                <h5 class="phone-message">Это поле обязательное</h5>
               </div>
+              <h5 class="check-message">Это поле обязательное</h5>
               <div class="form-item form-checkbox">
-                <input type="checkbox" id="checkbox" />
+                <input type="checkbox" id="checkbox" name="PersonalCheck" />
                 <label for="checkbox"></label>
                 <span class="checbox-label">
                   <span class="red-star">*</span>
@@ -226,7 +227,7 @@
                   <a href="https://waytochess.by/"> персональных данных </a>
                 </span>
               </div>
-              <button class="btn">Отправить заявку</button>
+              <button class="btn btn-form">Отправить заявку</button>
             </form>
           </div>
         </div>
@@ -304,7 +305,7 @@
                 <br />устанавливается индвидуально.
               </span>
             </div>
-            <button class="btn btn-pay">Оставить заявку</button>
+            <button class="btn btn-pay record">Оставить заявку</button>
           </div>
           <div class="cost-info_container">
             <div class="cost-info_item">
@@ -316,7 +317,7 @@
                 Стоимость зависит от формата и <br />количества участников
               </span>
             </div>
-            <button class="btn btn-pay">Оставить заявку</button>
+            <button class="btn btn-pay record">Оставить заявку</button>
           </div>
           <div class="cost-info_container">
             <div class="cost-info_item">
@@ -326,7 +327,7 @@
               </h3>
               <span>Cтоимость - 100 р</span>
             </div>
-            <button class="btn btn-pay">Оставить заявку</button>
+            <button class="btn btn-pay record">Оставить заявку</button>
           </div>
         </div>
       </section>
@@ -342,7 +343,7 @@
               глазах тренеров будут хорошим фундаментом для ваших будущих
               успехов или успехов вашего ребенка!
             </p>
-            <button class="btn">Записаться на курс</button>
+            <button class="btn record">Записаться на курс</button>
           </div>
           <img
             class="about-school_img"
@@ -392,5 +393,39 @@
         </a>
       </div>
     </footer>
+    <div class="zapis-modal">
+      <img src="./assets/img/zapis-img.jpg" alt="img" />
+      <div class="special-block_form">
+        <h2>
+          Записаться <br />
+          на пробный урок
+        </h2>
+        <form action="#" class="form-modal">
+          <div class="form-item form-input">
+            <label><span class="red-star">*</span> Имя</label>
+            <input type="text" name="Name" />
+            <h5 class="name-message_modal">Это поле обязательное</h5>
+          </div>
+          <div class="form-item form-input">
+            <label><span class="red-star">*</span> Телефон </label>
+            <input type="phone" name="Phone" />
+            <h5 class="phone-message_modal">Это поле обязательное</h5>
+          </div>
+          <h5 class="check-message_modal">Это поле обязательное</h5>
+          <div class="form-item form-checkbox">
+            <input type="checkbox" id="checkbox_modal" name="PersonalCheck" />
+            <label for="checkbox_modal"></label>
+            <span class="checbox-label">
+              <span class="red-star">*</span>
+              Я согласен на обработку моих
+              <a href="https://waytochess.by/"> персональных данных </a>
+            </span>
+          </div>
+          <button class="btn btn-form_modal">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal-bg"></div>
+    <script src="index.js"></script>
   </body>
 </html>

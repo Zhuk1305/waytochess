@@ -4,11 +4,13 @@
   margin: 0;
 }
 html {
-  scroll-behavior: smooth; /* свойство scroll-behavior не наследуется, применяется к прокручиваемым блокам */
+  scroll-behavior: smooth;
 }
 body {
   margin: auto;
+  position: relative;
 }
+
 p,
 span {
   font-family: "Montserrat", sans-serif;
@@ -260,6 +262,7 @@ a {
   margin-bottom: 30px;
 }
 
+.form-modal,
 .form {
   height: 100%;
   display: flex;
@@ -511,6 +514,61 @@ input[type="checkbox"]:checked {
   margin-right: 5px;
 }
 
+/* modal */
+.zapis-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  top: -200%;
+  bottom: 50%;
+  right: 50%;
+  left: 50%;
+  margin: auto;
+  transition: all 1s ease;
+}
+.zapis-modal.active {
+  top: 50%;
+}
+.zapis-modal .special-block_form {
+  width: 400px;
+  height: 620px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.zapis-modal img {
+  width: 400px;
+  height: 620px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.modal-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: -1;
+}
+.modal-bg.active {
+  display: block;
+  z-index: 1;
+}
+.name-message,
+.phone-message,
+.check-message,
+.name-message_modal,
+.phone-message_modal,
+.check-message_modal {
+  display: none;
+}
+.error-message {
+  display: block;
+  color: red;
+}
 @media (max-width: 900px) {
   .logo-container img {
     margin-right: 5px;
