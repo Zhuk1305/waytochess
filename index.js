@@ -75,9 +75,12 @@ function submitForm(currentForm) {
     phoneErrorMessage.classList.remove("error-message");
     checkErrorMessage.classList.remove("error-message");
     console.log(
+      "Name:",
       currentForm.Name.value,
+      "\nPhone:",
       currentForm.Phone.value,
-      currentForm.PersonalCheck.checked
+      "\nСогласен:",
+      currentForm.PersonalCheck.checked && "да"
     );
   }
 }
@@ -101,9 +104,12 @@ function submitFormModal(currentForm) {
     phoneModalErrorMessage.classList.remove("error-message");
     checkModalErrorMessage.classList.remove("error-message");
     console.log(
+      "Name:",
       currentForm.Name.value,
+      "\nPhone:",
       currentForm.Phone.value,
-      currentForm.PersonalCheck.checked
+      "\nСогласен:",
+      currentForm.PersonalCheck.checked ? "да" : "нет"
     );
   }
 }
