@@ -50,7 +50,9 @@ app.post("/", (req, res) => {
     from: "vanec_zhuk@mail.ru",
     to: "vanec_zhuk@mail.ru",
     subject: `Message from waytochess`,
-    text: `Заполнена анкета на странице: https://zhuk1305.github.io/waytochess/
+    text: `Заполнена анкета на странице: ${
+      req.protocol + "://" + req.get("host") + req.originalUrl
+    }
     
 Имя: ${req.body.name}
 Телефон: ${req.body.phone}
