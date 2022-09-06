@@ -359,17 +359,40 @@
     </main>
     <footer class="footer">
       <div class="counter">
-        <a href="https://www.liveinternet.ru/click" target="_blank">
-          <img
-            id="licntC149"
+        <!--LiveInternet counter--><a
+          href="https://www.liveinternet.ru/click"
+          target="_blank"
+          ><img
+            id="licnt59D7"
             width="88"
             height="31"
             style="border: 0"
             title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"
-            src="https://counter.yadro.ru/hit?t21.2;rhttps%3A//zhuk1305.github.io/;s1920*1080*24;uhttps%3A//waytochess.by/;h%u041E%u043D%u043B%u0430%u0439%u043D%20%u0448%u043A%u043E%u043B%u0430%20%u0448%u0430%u0445%u043C%u0430%u0442%20-%20Way%20to%20chess%20%7C%20%u0433.%u041C%u0438%u043D%u0441%u043A;0.07363438936876587"
-            alt="Счетчик"
-          />
-        </a>
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+            alt=""
+        /></a>
+        <script>
+          (function (d, s) {
+            d.getElementById("licnt59D7").src =
+              "https://counter.yadro.ru/hit?t14.4;r" +
+              escape(d.referrer) +
+              (typeof s == "undefined"
+                ? ""
+                : ";s" +
+                  s.width +
+                  "*" +
+                  s.height +
+                  "*" +
+                  (s.colorDepth ? s.colorDepth : s.pixelDepth)) +
+              ";u" +
+              escape(d.URL) +
+              ";h" +
+              escape(d.title.substring(0, 150)) +
+              ";" +
+              Math.random();
+          })(document, screen);
+        </script>
+        <!--/LiveInternet-->
       </div>
       <div class="footer-info">
         <h5>
