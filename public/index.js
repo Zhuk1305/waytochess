@@ -54,6 +54,31 @@ btnFormModal.addEventListener("click", (e) => {
   submitFormModal(formModal);
 });
 
+function sendData(formData) {
+  console.log(formData);
+  let formDataSend = {
+    name: formData.Name.value,
+    phone: formData.Phone.value,
+    check: formData.PersonalCheck.checked,
+  };
+  let xhr = new XMLHttpRequest();
+
+  xhr.open("POST", "/");
+  xhr.setRequestHeader("content-type", "application/json");
+  xhr.onload = function () {
+    console.log(xhr.responseText);
+    if (xhr.responseText == "success") {
+      alert("Email sent");
+      formData.Name.value = "";
+      formData.Phone.value = "";
+      formData.PersonalCheck.checked = false;
+    } else {
+      alert("Something went wrong!");
+    }
+  };
+  xhr.send(JSON.stringify(formDataSend));
+}
+
 function submitForm(currentForm) {
   if (
     !currentForm.Name.value ||
@@ -74,6 +99,7 @@ function submitForm(currentForm) {
     nameErrorMessage.classList.remove("error-message");
     phoneErrorMessage.classList.remove("error-message");
     checkErrorMessage.classList.remove("error-message");
+    sendData(currentForm);
     console.log(
       "Name:",
       currentForm.Name.value,
@@ -84,6 +110,7 @@ function submitForm(currentForm) {
     );
   }
 }
+
 function submitFormModal(currentForm) {
   if (
     !currentForm.Name.value ||
@@ -103,6 +130,7 @@ function submitFormModal(currentForm) {
     nameModalErrorMessage.classList.remove("error-message");
     phoneModalErrorMessage.classList.remove("error-message");
     checkModalErrorMessage.classList.remove("error-message");
+    sendData(currentForm);
     console.log(
       "Name:",
       currentForm.Name.value,
