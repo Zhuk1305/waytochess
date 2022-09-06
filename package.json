@@ -1,0 +1,28 @@
+{
+  "name": "waytochess_landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zhuk1305/waytochess.git"
+  },
+  "keywords": [],
+  "author": "Zhuk1305",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zhuk1305/waytochess/issues"
+  },
+  "homepage": "https://github.com/Zhuk1305/waytochess#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemailer": "^6.7.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
