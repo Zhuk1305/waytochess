@@ -645,6 +645,19 @@ input[type="checkbox"]:checked {
   .footer h5 {
     font-size: 10px;
   }
+
+  .zapis-modal {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .zapis-modal .special-block_form {
+    width: 300px;
+    border-radius: 10px;
+  }
+  .zapis-modal img {
+    display: none;
+  }
 }
 @media (max-width: 600px) {
   .cost-info_item span {
