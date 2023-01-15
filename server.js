@@ -15,16 +15,16 @@ app.get("/", (req, res) => {
 
 app.post("/", (req, res) => {
   const transporter = nodemailer.createTransport({
-    host: "smtp.mail.ru",
+    host: "smtp.gmail.com",
     port: 587,
     auth: {
-      user: "vanec_zhuk@mail.ru",
-      pass: "wgGpzJ63bmAHihhz42TS",
+      user: "waytochess.com@gmail.com",
+      pass: "bndhelvdspcmlpwn",
     },
   });
   const mailOptions = {
-    from: "vanec_zhuk@mail.ru",
-    to: "vanec_zhuk@mail.ru",
+    from: "waytochess.com@gmail.com",
+    to: "waytochess.com@gmail.com",
     subject: `Message from waytochess`,
     text: `Заполнена анкета на странице: ${
       req.protocol + "://" + req.get("host") + req.originalUrl
