@@ -10,9 +10,11 @@ const specialBlock = document.querySelector(".special-block");
 const nameErrorMessage = document.querySelector(".name-message");
 const phoneErrorMessage = document.querySelector(".phone-message");
 const checkErrorMessage = document.querySelector(".check-message");
+const socialErrorMessage = document.querySelector(".social-message");
 const nameModalErrorMessage = document.querySelector(".name-message_modal");
 const phoneModalErrorMessage = document.querySelector(".phone-message_modal");
 const checkModalErrorMessage = document.querySelector(".check-message_modal");
+const socialModalErrorMessage = document.querySelector(".social-message_modal");
 
 btnFree.addEventListener("click", () => {
   specialBlock.scrollIntoView(top);
@@ -30,7 +32,7 @@ function clickSubmitBtn() {
   submitForm();
 }
 
-function addEventListener(elList, type) {
+function addHadlerEventListener(elList, type) {
   for (let i = 0; i < elList.length; i++) {
     elList[i].addEventListener("click", () => {
       type === "record" && clickRecordBtn();
@@ -38,7 +40,7 @@ function addEventListener(elList, type) {
     });
   }
 }
-addEventListener(btnRecord, "record");
+addHadlerEventListener(btnRecord, "record");
 
 modalBg.addEventListener("click", () => {
   modalBg.classList.remove("active");
@@ -59,7 +61,13 @@ function sendData(formData) {
   let formDataSend = {
     name: formData.Name.value,
     phone: formData.Phone.value,
-    check: formData.PersonalCheck.checked,
+    checkPesonal: formData.PersonalCheck.checked,
+    checkSocial: [
+      formData.SocialCheck[0].checked && "Звонок",
+      formData.SocialCheck[1].checked && "Telegram",
+      formData.SocialCheck[2].checked && "Viber",
+      formData.SocialCheck[3].checked && "WathsApp",
+    ],
   };
   let xhr = new XMLHttpRequest();
 
@@ -72,6 +80,10 @@ function sendData(formData) {
       formData.Name.value = "";
       formData.Phone.value = "";
       formData.PersonalCheck.checked = false;
+      formData.SocialCheck[0].checked = false;
+      formData.SocialCheck[1].checked = false;
+      formData.SocialCheck[2].checked = false;
+      formData.SocialCheck[3].checked = false;
     } else {
       alert("Something went wrong!");
     }
@@ -83,7 +95,11 @@ function submitForm(currentForm) {
   if (
     !currentForm.Name.value ||
     !currentForm.Phone.value ||
-    !currentForm.PersonalCheck.checked
+    !currentForm.PersonalCheck.checked ||
+    (!currentForm.SocialCheck[0].checked &&
+      !currentForm.SocialCheck[1].checked &&
+      !currentForm.SocialCheck[2].checked &&
+      !currentForm.SocialCheck[3].checked)
   ) {
     console.log("click");
     !currentForm.Name.value
@@ -95,10 +111,17 @@ function submitForm(currentForm) {
     !currentForm.PersonalCheck.checked
       ? checkErrorMessage.classList.add("error-message")
       : checkErrorMessage.classList.remove("error-message");
+    !currentForm.SocialCheck[0].checked &&
+    !currentForm.SocialCheck[1].checked &&
+    !currentForm.SocialCheck[2].checked &&
+    !currentForm.SocialCheck[3].checked
+      ? socialErrorMessage.classList.add("error-message")
+      : socialErrorMessage.classList.remove("error-message");
   } else {
     nameErrorMessage.classList.remove("error-message");
     phoneErrorMessage.classList.remove("error-message");
     checkErrorMessage.classList.remove("error-message");
+    socialErrorMessage.classList.remove("error-message");
     sendData(currentForm);
     console.log(
       "Name:",
@@ -115,7 +138,11 @@ function submitFormModal(currentForm) {
   if (
     !currentForm.Name.value ||
     !currentForm.Phone.value ||
-    !currentForm.PersonalCheck.checked
+    !currentForm.PersonalCheck.checked ||
+    (!currentForm.SocialCheck[0].checked &&
+      !currentForm.SocialCheck[1].checked &&
+      !currentForm.SocialCheck[2].checked &&
+      !currentForm.SocialCheck[3].checked)
   ) {
     !currentForm.Name.value
       ? nameModalErrorMessage.classList.add("error-message")
@@ -126,10 +153,17 @@ function submitFormModal(currentForm) {
     !currentForm.PersonalCheck.checked
       ? checkModalErrorMessage.classList.add("error-message")
       : checkModalErrorMessage.classList.remove("error-message");
+    !currentForm.SocialCheck[0].checked &&
+    !currentForm.SocialCheck[1].checked &&
+    !currentForm.SocialCheck[2].checked &&
+    !currentForm.SocialCheck[3].checked
+      ? socialModalErrorMessage.classList.add("error-message")
+      : socialModalErrorMessage.classList.remove("error-message");
   } else {
     nameModalErrorMessage.classList.remove("error-message");
     phoneModalErrorMessage.classList.remove("error-message");
     checkModalErrorMessage.classList.remove("error-message");
+    socialModalErrorMessage.classList.remove("error-message");
     sendData(currentForm);
     console.log(
       "Name:",

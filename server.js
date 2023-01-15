@@ -22,7 +22,6 @@ app.post("/", (req, res) => {
       pass: "wgGpzJ63bmAHihhz42TS",
     },
   });
-
   const mailOptions = {
     from: "vanec_zhuk@mail.ru",
     to: "vanec_zhuk@mail.ru",
@@ -34,8 +33,9 @@ app.post("/", (req, res) => {
 Имя: ${req.body.name}
 Телефон: ${req.body.phone}
 Я согласен на обработку моих персональных данных: ${
-      req.body.check ? "Да" : "Нет"
+      req.body.checkPersonal ? "Да" : "Нет"
     }
+Способы связи: ${req.body.checkSocial.join(",")}
 `,
   };
 
