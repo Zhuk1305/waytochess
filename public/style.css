@@ -80,6 +80,10 @@ a {
   justify-content: space-between;
   align-items: flex-end;
 }
+/* TODO: delete display none when inst will be ready */
+.social-logo {
+  display: none;
+}
 .social-logo img {
   opacity: 0.5;
   width: 24px;
@@ -623,6 +627,7 @@ input[type="checkbox-personal"]:checked {
 .trainer-img {
   height: 408px;
   min-width: 408px;
+  object-fit: cover;
 }
 .trainer h2 {
   font-size: 56px;
